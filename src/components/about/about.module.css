@@ -1,0 +1,48 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.foto {
+  max-width: 512px;
+  height: 294px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 27px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111;
+}
+
+@media (min-width: 1280px) {
+
+  .about {
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .foto {
+    height: 489px;
+    order: 1;
+    margin-top: 85px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+
+  .description {
+    font-size: 22px;
+  }
+}
