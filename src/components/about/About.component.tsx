@@ -1,10 +1,12 @@
+import foto from '../../assets/foto-512-512.jpg';
+
 import styles from './about.module.css';
 
 export function AboutComponent() {
     return (
         <>
             <div className={styles.about}>
-                <img className={styles.foto} src="/src/assets/foto-512-512.jpg" alt="foto"></img>
+                <img className={styles.foto} src={foto} alt="foto"></img>
                 <div>
                     <h1 className={styles.title}>About me</h1>
                     <p className={styles.description}>
