@@ -29,8 +29,8 @@ export function HeaderComponent() {
                         </ul>
                     </div>
                     <nav className={styles.nav}>
-                        <a href="#">About</a>
-                        <a href="#">Product</a>
+                        <a href="http">About</a>
+                        <a href="http">Product</a>
                     </nav>
                     <div className={styles.group}>
                         <div className={styles.group}>
