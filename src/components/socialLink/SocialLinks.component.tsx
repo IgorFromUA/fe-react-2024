@@ -1,19 +1,18 @@
+import type { SocialNetwork } from '@/interfaces/socialNetwork';
+
 import { socialNetworks } from '../../constants/socialNetworks';
+import { SocialIcon } from '../socialIcon/SocialIcon.component';
 
 import styles from './socialLink.module.css';
 
-function SocialLinks() {
+export function SocialLinks() {
     return (
         <ul className={styles.links}>
-            {socialNetworks.map((network) => (
+            {socialNetworks.map((network: SocialNetwork) => (
                 <li key={network.name}>
-                    <a href={network.url} target="_blank" rel="noopener noreferrer">
-                        <img src={network.icon} alt={network.name} className={styles.icon} />
-                    </a>
+                    <SocialIcon name={network.name} icon={network.icon} url={network.url} />
                 </li>
             ))}
         </ul>
     );
 }
-
-export default SocialLinks;

@@ -5,17 +5,9 @@
   margin-bottom: 30px;
 }
 
-.icon {
-  width: 25px;
-}
-
 @media (min-width: 1280px) {
 
   .links {
     margin-bottom: 40px;
-  }
-
-  .icon {
-    width: 35px;
   }
 }

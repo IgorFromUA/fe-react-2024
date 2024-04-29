@@ -1,7 +1,7 @@
 import facebookIcon from '../assets/facebook-icon.svg';
 import instagramIcon from '../assets/instagram-icon.svg';
 import linkedinIcon from '../assets/linkedin-icon.svg';
-import type SocialNetwork from '../interfaces/socialNetwork';
+import type { SocialNetwork } from '../interfaces/socialNetwork';
 
 export const socialNetworks: SocialNetwork[] = [
     {
