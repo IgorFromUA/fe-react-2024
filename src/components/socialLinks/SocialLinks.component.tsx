@@ -3,7 +3,7 @@ import type { SocialNetwork } from '@/interfaces/socialNetwork';
 import { socialNetworks } from '../../constants/socialNetworks';
 import { SocialIcon } from '../socialIcon/SocialIcon.component';
 
-import styles from './socialLink.module.css';
+import styles from './socialLinks.module.css';
 
 export function SocialLinks() {
     return (

@@ -1,4 +1,4 @@
-import { SocialLinks } from '../socialLink/SocialLinks.component';
+import { SocialLinks } from '../socialLinks/SocialLinks.component';
 
 import styles from './footer.module.css';
 
