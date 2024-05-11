@@ -1,4 +1,4 @@
-import type { SocialNetwork } from '@/interfaces/socialNetwork';
+import type { SocialNetwork } from '@/interfaces';
 
 import styles from './socialIcon.module.css';
 

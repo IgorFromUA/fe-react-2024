@@ -1,4 +1,4 @@
-import type { SocialNetwork } from '@/interfaces/socialNetwork';
+import type { SocialNetwork } from '@/interfaces';
 
 import { socialNetworks } from '../../constants/socialNetworks';
 import { SocialIcon } from '../socialIcon/SocialIcon.component';
