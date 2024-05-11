@@ -1,5 +1,5 @@
-const productsAt = '2024-05-05T05:05:28.404Z';
-const categoryAt = '2024-05-05T05:05:28.330Z';
+const productsAt: Date = new Date('2024-05-05T05:05:28.404Z');
+const categoryAt = new Date('2024-05-05T05:05:28.330Z');
 const categoryImg = 'https://i.imgur.com/Qphac99.jpeg';
 const categoryImg2 = 'https://i.imgur.com/qNOjJje.jpeg';
 const categoryImg3 = 'https://i.imgur.com/BG8J0Fj.jpg';
@@ -403,23 +403,6 @@ export const products = [
         description:
             'Elevate your style with our Chic Transparent Fashion Handbag, perfect for showcasing your essentials with a clear, modern edge. This trendy accessory features durable acrylic construction, luxe gold-tone hardware, and an elegant chain strap. Its compact size ensures you can carry your day-to-day items with ease and sophistication.',
         images: ['https://i.imgur.com/Lqaqz59.jpg', 'https://i.imgur.com/uSqWK0m.jpg', 'https://i.imgur.com/atWACf1.jpg'],
-        creationAt: productsAt,
-        updatedAt: productsAt,
-        category: {
-            id: 5,
-            name: 'Miscellaneous',
-            image: categoryImg3,
-            creationAt: categoryAt,
-            updatedAt: categoryAt,
-        },
-    },
-    {
-        id: 50,
-        title: 'Trendy Pink-Tinted Sunglasses',
-        price: 38,
-        description:
-            'Step up your style game with these fashionable black-framed, pink-tinted sunglasses. Perfect for making a statement while protecting your eyes from the glare. Their bold color and contemporary design make these shades a must-have accessory for any trendsetter looking to add a pop of color to their ensemble.',
-        images: ['https://i.imgur.com/0qQBkxX.jpg', 'https://i.imgur.com/I5g1DoE.jpg', 'https://i.imgur.com/myfFQBW.jpg'],
         creationAt: productsAt,
         updatedAt: productsAt,
         category: {
