@@ -16,7 +16,7 @@ function App() {
 
     useEffect(() => {
         setGeneralCart(getLocalStorageCart);
-        setActivePage(localStorage.getItem('activePage'));
+        if (localStorage.getItem('activePage')) setActivePage(localStorage.getItem('activePage'));
     }, []);
 
     function getLocalStorageCart(): Id[] {
