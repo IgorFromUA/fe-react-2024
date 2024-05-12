@@ -45,9 +45,35 @@
   font-weight: 700;
 }
 
+.nav button {
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.bascetWrapper {
+  position: static;
+}
+
 .bascet {
   width: 24px;
   height: 24px;
+}
+
+.quantity {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 12px;
+  left: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  color: #111;
+  background-color: #EF4934;
+  border-radius: 50%;
+  z-index: 10;
 }
 
 .authButtons {
@@ -65,7 +91,7 @@
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
-  color: #FFF;
+  color: inherit  ;
   border-radius: 40px;
   border: none;
   padding: 5px 10px;

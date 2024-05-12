@@ -53,3 +53,7 @@
   height: 19px;
   color: inherit;
 }
+
+.cartActive {
+  filter: invert(37%) sepia(93%) saturate(7471%);
+}
