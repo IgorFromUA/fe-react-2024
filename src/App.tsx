@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import { products } from '@/moc/moc';
 
 import { AboutComponent } from './components/about/About.component.tsx';
 import { FooterComponent } from './components/footer/Footer.component.tsx';
 import { HeaderComponent } from './components/header/Header.component.tsx';
 import { ProducstList } from './components/productsList/ProductsList.component.tsx';
+import type { Id } from './interfaces/id.ts';
+import type { Page } from './interfaces/page.ts';
 
 import styles from './App.module.css';
-
-type Page = string | null;
-type Id = number;
 
 function App() {
     const [activePage, setActivePage] = useState<Page>('about');
@@ -22,12 +23,7 @@ function App() {
     function getLocalStorageCart(): Id[] {
         if (!localStorage.getItem('generalCart')) return [];
         const localStorageCart = localStorage.getItem('generalCart')?.split(' ').map(Number);
-        if (
-            Array.isArray(localStorageCart) &&
-            localStorageCart.every((item) => typeof item === 'number') &&
-            localStorageCart !== undefined &&
-            localStorageCart.length > 0
-        ) {
+        if (localStorageCart !== undefined && localStorageCart.every((item) => typeof item === 'number') && localStorageCart.length > 0) {
             return localStorageCart;
         }
         return [];
@@ -53,22 +49,21 @@ function App() {
         }
     };
 
-    const handlerSetActivePage = ({ currentTarget }: React.MouseEvent) => {
-        const page = currentTarget.getAttribute('name');
-        setActivePage(() => {
-            localStorage.setItem('activePage', page as string);
-            return page;
-        });
+    const handlerSetActivePage = (page: string) => {
+        setActivePage(page);
+        localStorage.setItem('activePage', page as string);
     };
 
     return (
         <>
             <div className={styles.app}>
                 <div className={styles.center}>
-                    <HeaderComponent quantityInCart={generalCart.length} handlerSetActivePage={(event) => handlerSetActivePage(event)} />
+                    <HeaderComponent quantityInCart={generalCart.length} handlerSetActivePage={handlerSetActivePage} />
                     <main className={styles.home}>
                         {activePage === 'about' && <AboutComponent />}
-                        {activePage === 'product' && <ProducstList onClickCart={onClickCart} generalCart={generalCart} />}
+                        {activePage === 'product' && (
+                            <ProducstList products={products} onClickCart={onClickCart} generalCart={generalCart} />
+                        )}
                     </main>
                 </div>
             </div>

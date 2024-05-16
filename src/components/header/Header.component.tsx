@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import type { HeaderComponentProps } from '@/interfaces';
+
 import bascet from '../../assets/basket-icon.svg';
 import line from '../../assets/line-icon.svg';
 import login from '../../assets/login-icon.svg';
@@ -11,12 +13,7 @@ import userAdd from '../../assets/userAdd-icon.svg';
 
 import styles from './header.module.css';
 
-interface Property {
-    handlerSetActivePage: React.MouseEventHandler;
-    quantityInCart: number;
-}
-
-export const HeaderComponent: FC<Property> = ({ quantityInCart, handlerSetActivePage }) => (
+export const HeaderComponent: FC<HeaderComponentProps> = ({ quantityInCart, handlerSetActivePage }) => (
     <header className={styles.header}>
         <div className={`${styles.wrapper} ${styles.headerConteiner}`}>
             <div className={styles.group}>
@@ -34,10 +31,10 @@ export const HeaderComponent: FC<Property> = ({ quantityInCart, handlerSetActive
                 </ul>
             </div>
             <nav className={styles.nav}>
-                <button onClick={(event) => handlerSetActivePage(event)} name="about" data-name="about">
+                <button onClick={() => handlerSetActivePage('about')} data-name="about">
                     About
                 </button>
-                <button onClick={(event) => handlerSetActivePage(event)} name="product" data-name="product">
+                <button onClick={() => handlerSetActivePage('product')} data-name="product">
                     Product
                 </button>
             </nav>

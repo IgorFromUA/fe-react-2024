@@ -1,17 +1,12 @@
 import type { FC } from 'react';
 
-import { products } from '@/moc/moc';
+import type { ProducstListProps } from '@/interfaces';
 
 import ProductCard from '../productCard/ProductCard.component';
 
 import styles from './productsList.module.css';
 
-interface Props {
-    onClickCart: Function;
-    generalCart: number[];
-}
-
-export const ProducstList: FC<Props> = ({ onClickCart, generalCart }) => (
+export const ProducstList: FC<ProducstListProps> = ({ onClickCart, generalCart, products }) => (
     <ul className={`${styles.cards} ${styles.wrapper}`}>
         {products.map(({ id, title, price, images }) => (
             <ProductCard
